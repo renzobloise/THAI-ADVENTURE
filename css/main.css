@@ -1,0 +1,684 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* ESTILOS DEL INDEX EN DESKTOP */
+.contenedor {
+    height: 100vh;
+    display: grid;
+
+    grid-template-areas: "header header header"
+                          "main main main"
+                          "tituloTres tituloTres tituloTres"
+                          "section section2 section3"
+                          "footer footer footer";
+}
+
+header {
+    grid-area: header;
+    background-color: rgb(141, 191, 204);
+    color: white;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0.5rem 1rem;
+    padding: 0.5rem 2rem;
+    background-color: rgb(216, 77, 73);
+    border: solid white;
+    border-radius: 20%;
+    text-align: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    border-color: white;
+    font-size: 1.3rem;
+}
+
+.logo img {
+    width: 8rem;
+}
+
+.usuario img {
+    width: 4rem;
+}
+
+main {
+    grid-area: main;
+    background-color: rgb(251, 187, 185);
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin: 2rem;
+    border: solid 0.3rem white;
+    padding: 1rem;
+    font-weight: bold;
+}
+
+.contenido {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    font-weight: bold;
+    margin-top: 5rem;
+    margin-bottom: 8rem;
+}
+
+.parrafo1 {
+    padding: 0.5rem 1rem;
+    margin: 1rem;
+    width: 45%;
+}
+
+.parrafo1 h2 {
+    font-size: 2rem;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.parrafo1 p {
+    font-size: 1.5rem;
+    text-align: justify;
+}
+
+.videoInicial iframe {
+    border-radius: 10%;
+    border: solid white;
+}
+
+.tituloTres {
+    grid-area: tituloTres;
+    background-color: rgb(251, 187, 185);
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    background-color: rgb(216, 77, 73);
+    color: white;
+    padding: 1rem;
+}
+
+section img,
+.section2 img,
+.section3 img {
+    margin: 20px auto;
+    border-radius: 30px;
+    padding: 10px;
+    width: 25rem;
+    height: 15rem;
+    cursor: pointer;
+    
+}
+
+section:hover img,
+.section2:hover img,
+.section3:hover img {
+   
+}
+
+section {
+    grid-area: section;
+}
+
+.section2 {
+    grid-area: section2;
+}
+
+.section3 {
+    grid-area: section3;
+}
+
+section,
+.section2,
+.section3 {
+    background-color: rgb(251, 187, 185);
+    text-align: center;
+    height: 25rem;
+    font-size: 1.7rem;
+}
+
+footer {
+    grid-area: footer;
+    background-color: rgb(141, 191, 204);
+    height: 7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0.5rem;
+    height: auto;
+}
+
+.textoFooter {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+.redes img {
+    width: 2.5rem;
+    margin: 0.8rem;
+}
+
+
+/* PANTALLA INTERMEDIA DEL INDEX  */
+@media only screen and (max-width:1024px) {
+
+    header {
+        justify-content: space-around;
+    }
+
+    nav ul li {
+        margin: 0.5rem;
+        padding: 0.5rem;
+        text-align: center;
+    }
+
+    nav ul li a {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+    .logo img {
+        width: 6rem;
+    }
+
+    .usuario img {
+        width: 3rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .contenido {
+        margin-top: -1.2rem;
+        margin-bottom: 1rem;
+        margin-left: 1rem;
+    }
+
+    .parrafo1 {
+        width: 100%;
+    }
+
+    .parrafo1 p {
+        font-size: 1.3rem;
+    }
+
+    section img,
+    .section2 img,
+    .section3 img {
+        width: 250px;
+        height: auto;
+    }
+
+    section,
+    .section2,
+    .section3 {
+        font-size: 1.1rem;
+        height: auto;
+    }
+
+    .section3 {
+        padding-bottom: 3rem;
+    }
+
+    .textoFooter {
+        font-size: 1.5rem;
+    }
+
+    .redes img {
+        width: 1.8rem;
+    }
+}
+
+
+/* PANTALLA DE CELULAR DEL INDEX */
+@media only screen and (max-width:600px) {
+    .contenedor {
+        height: 100vh;
+        display: grid;
+        grid-template-areas: "header"
+            "main"
+            "tituloTres"
+            "section"
+            "section2"
+            "section3"
+            "footer";
+    }
+
+    header {
+        justify-content: space-around;
+        align-content: flex-start;
+
+    }
+
+    nav ul li {
+        margin: 0.1rem;
+        padding: 0.1rem;
+        text-align: center;
+    }
+
+    .adventures,
+    .contacto {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+
+    nav ul li a {
+        font-size: 0.9rem;
+    }
+
+    .logo img {
+        width: 4rem;
+    }
+
+    .usuario img {
+        width: 2rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        margin: 1rem;
+        padding: 0.5rem;
+    }
+
+    .contenido {
+        margin-top: -1.2rem;
+        margin-bottom: 1rem;
+        margin-left: 1rem;
+    }
+
+    .parrafo1 {
+        padding: 0%;
+        width: auto;
+    }
+
+    .parrafo1 h2 {
+        font-size: 1.3rem;
+        color: white;
+        padding: 0.1rem;
+    }
+
+    .parrafo1 p {
+        font-size: 1rem;
+    }
+
+    .videoInicial iframe {
+        width: 300px;
+        height: auto;
+    }
+
+    .tituloTres {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+
+    section img,
+    .section2 img,
+    .section3 img {
+        width: 250px;
+        height: auto;
+    }
+
+    section,
+    .section2,
+    .section3 {
+        font-size: 1rem;
+        height: auto;
+    }
+
+    .section3 {
+        padding-bottom: 3rem;
+    }
+
+    .textoFooter {
+        font-size: 1rem;
+    }
+
+    .redes img {
+        width: 1.2rem;
+    }
+}
+
+/* ESTILOS PROPIOS DE RECORRIDO VIRTUAL - DESKTOP  */
+.contenedorDos {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-areas: "header header"
+        "aside main "
+        "footerRecorrido footerRecorrido";
+}
+
+aside {
+    height: 100%;
+    grid-area: aside;
+    background-color: rgb(216, 77, 73);
+    display: flex;
+    flex-direction: column;
+}
+
+aside h2 {
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+aside ul {
+    list-style: none;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+aside ul li {
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+.mainRecorrido {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 2rem;
+}
+
+.galleryItem {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.galleryItem .image {
+    width: 20rem;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.galleryItem .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 1rem;
+    cursor: pointer;
+    
+}
+
+.bangkokImages:hover img {
+    
+}
+
+.footerRecorrido {
+    grid-area: footerRecorrido;
+}
+
+/* ESTILOS RECORRIDO VIRTUAL PARA PANTALLA DE INTERMEDIA*/
+@media only screen and (max-width:1024px) {
+    aside h2 {
+        text-align: start;
+        font-size: 1.5rem;
+    }
+
+    aside ul li {
+        padding: 1rem;
+        font-size: 1.2rem;
+    }
+}
+
+/* ESTILOS RECORRIDO VIRTUAL PARA PANTALLA DE CELULAR */
+@media only screen and (max-width:600px) {
+
+    aside h2 {
+        font-size: 1rem;
+    }
+
+    aside ul li {
+        font-size: 0.9rem;
+    }
+
+}
+
+/* ESTILOS DE QUIENES SOMOS DESKTOP  */
+
+.contenedorTres {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 45% 55%;
+    grid-template-areas: "header header"
+        "tituloQuienesSomos tituloQuienesSomos"
+        " textoQuienesSomos imagenQuienesSomos"
+        "footer footer";
+
+
+}
+
+.tituloQuienesSomos {
+    grid-area: tituloQuienesSomos;
+}
+
+.textoQuienesSomos {
+    grid-area: textoQuienesSomos;
+    padding-left: 10%;
+    padding-bottom: 10%;
+    padding-top: 5%;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.textoQuienesSomos h2 {
+    color: white;
+    font-size: 2rem;
+    padding-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.textoQuienesSomos p {
+    padding-bottom: 10%;
+    font-size: 1.2rem;
+}
+
+.imagenQuienesSomos {
+    grid-area: imagenQuienesSomos;
+    display: flex;
+    align-items: center;
+
+}
+
+.imagenQuienesSomos img {
+    border-radius: 20%;
+    height: 300px;
+    margin-left: 20%;
+    width: 400px;
+}
+
+
+/* ESTILOS QUIENES SOMOS PARA PANTALLA DE INTERMEDIA*/
+@media only screen and (max-width:1024px) {
+    .contenedorTres {
+        height: 100vh;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-areas: "header"
+            "tituloQuienesSomos"
+            "textoQuienesSomos"
+            "imagenQuienesSomos"
+            "footer";
+    }
+
+    .textoQuienesSomos {
+        padding-right: auto;
+        padding-left: 1rem;
+        justify-content: center;
+        padding-bottom: 0rem;
+    }
+
+    .textoQuienesSomos p {
+        padding-bottom: 0rem;
+    }
+
+    .imagenesQuienesSomos {
+        justify-content: center;
+    }
+
+    .imagenQuienesSomos img {
+        width: 440px;
+        margin-left: auto;
+    }
+}
+
+@media only screen and (max-width:600px) {
+
+
+    .textoQuienesSomos {
+        padding-right: auto;
+        padding-left: 1rem;
+        justify-content: center;
+        padding-bottom: 0rem;
+    }
+
+    .textoQuienesSomos h2 {
+        font-size: 1.2rem;
+    }
+
+    .textoQuienesSomos p {
+        padding-bottom: 0rem;
+    }
+
+    .imagenesQuienesSomos {
+        justify-content: center;
+    }
+
+    .imagenQuienesSomos img {
+        width: 300px;
+        height: auto;
+        margin-left: auto;
+    }
+}
+
+/* ESTILOS PROPIOS DE CONTACTO EN DESKTOP */
+.contenedorCuatro {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "header header"
+        "tituloContacto tituloContacto"
+        "formulario iconos"
+        "footer footer";
+
+}
+
+.tituloContacto {
+    grid-area: tituloContacto;
+}
+
+.formulario {
+    grid-area: formulario;
+   
+}
+
+.formulario form {
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+}
+
+.campo {
+    margin: 10px;
+    font-size: 20px;
+}
+
+.botones {
+    padding: 20px;
+    text-align: center;
+}
+
+.botones input {
+    padding: 10px;
+}
+
+.iconos {
+    grid-area: iconos;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.iconos img {
+    width: 100px;
+    height: auto;
+    margin: 7px;
+}
+
+/* ESTILOS CONTACTO PARA PANTALLA DE INTERMEDIA*/
+@media only screen and (max-width:1024px) {
+
+    .contenedorCuatro {
+        grid-template-columns: auto;
+        grid-template-areas: "header"
+                            "tituloContacto"
+                            "formulario" 
+                            "iconos"
+                            "footer";
+    }
+
+    .formulario{
+        display: flex;
+        justify-content: center;
+    }
+
+    .formulario form{
+        width: 400px;
+    }
+
+    .iconos img {
+        width: 70px;
+        padding-bottom: 2rem;  
+    }
+}
+/* ESTILOS CONTACTO PARA PANTALLA DE CELULAR*/
+@media only screen and (max-width:600px) {
+    .campo {
+        font-size: 1rem;
+    }
+
+    .formulario form {
+        margin-left: 0rem;
+    }
+
+    .formulario form{
+        width: 250px;
+    }
+    .iconos img {
+        width: 60px;
+    }
+}
