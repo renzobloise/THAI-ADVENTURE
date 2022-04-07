@@ -132,7 +132,7 @@ section img,
     width: 25rem;
     height: 15rem;
     cursor: pointer;
-   transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
 }
 
 section:hover img,
