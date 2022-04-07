@@ -132,13 +132,13 @@ section img,
     width: 25rem;
     height: 15rem;
     cursor: pointer;
-    
+   transition: .5s ease-in-out;
 }
 
 section:hover img,
 .section2:hover img,
 .section3:hover img {
-   
+    transform: scale(1.1);  
 }
 
 section {
@@ -430,11 +430,11 @@ aside ul li {
     object-fit: cover;
     margin: 1rem;
     cursor: pointer;
-    
+    transition: .5s ease-in-out;
 }
 
 .bangkokImages:hover img {
-    
+    transform: scale(1.2);
 }
 
 .footerRecorrido {
